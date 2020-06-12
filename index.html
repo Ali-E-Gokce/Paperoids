@@ -224,7 +224,7 @@
             fire: function() {
                 if (!this.dying) {
                     Bullets.fire(this.item.position, this.angle);
-                    // assets.sounds.fire.play();
+                    assets.sounds.fire.play();
                 }
             },
 
@@ -451,7 +451,7 @@
             explode: function(rock) {
                 var size = rock.shapeType % 3;
                 var explosionSound = assets.sounds.explosions[size];
-                // explosionSound.play();
+                explosionSound.play();
                 var boomRock = rock.symbol.definition.clone();
                 boomRock.position = rock.position;
                 for (var i = 0; i < boomRock.segments.length; i++) {
